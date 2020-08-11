@@ -24,11 +24,6 @@ function formatOptions(value, row, index) {
             else {
                 return "T/N";
             }
-	case "015":
-            var model = row.car_model;
-            if (["J4482", "J4282", "J4442", "J4242"].indexOf(model) >= 0) {
-                return "TOW";
-            }
 	case "030":
             var model3 = row.car_model;
             if (model3 == "J4442") {
@@ -47,6 +42,11 @@ function formatOptions(value, row, index) {
 	case "045":
 	case "047":
 		return "N/T/P";
+	        case "015":
+            var model = row.car_model;
+            if (["J4482", "J4282", "J4442", "J4242"].indexOf(model) >= 0) {
+                return "TOW";
+            }
 	default:
             return "";
     }
