@@ -52,3 +52,7 @@ def temp_route():
 @webapp.route('/cars2')
 def cars2():
     return render_template("cars2.html")
+
+@webapp.route('/hof')
+def hof():
+    return render_template("hof.html")
