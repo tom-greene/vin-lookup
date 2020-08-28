@@ -46,6 +46,15 @@ def get_cars():
 
     return jsonify(result)
 
+# endpoint to show recent cars
+@telly_api.route("/api/cars/recent", methods=["GET"])
+def get_cars_recent():
+    cars_recent = repository.get_cars_recent()
+
+    result = cars_schema.dump(cars_recent)
+
+    return jsonify(result)
+
 
 @telly_api.route("/api/update", methods=["GET"])
 def update_cars():

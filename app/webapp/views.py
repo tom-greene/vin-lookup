@@ -11,6 +11,12 @@ def index():
     return render_template("cars.html", scraper_stats=scraper_stats)
 
 
+@webapp.route('/all')
+@cache.cached(timeout=60)
+def cars_all():
+    scraper_stats = repository.get_scraper_stats()
+    return render_template("cars-all.html", scraper_stats=scraper_stats)
+
 @webapp.route('/other')
 @cache.cached(timeout=500)
 def other():
