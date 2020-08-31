@@ -53,7 +53,10 @@
 <body>
 <ul class="nav nav-tabs bg-dark">
     <li class="nav-item">
-        <a class="nav-link" href="/">Cars</a>
+        <a class="nav-link" href="/">Recent Cars</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/all">All Cars</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{ url_for("webapp.dealers") }}">Dealers</a>
@@ -98,7 +101,7 @@
         crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='js/telly.js') }}"></script>
 <script src="{{ url_for('static', filename='js/table.js') }}"></script>
-{{ moment.include_moment() }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
 <div class="container">
   <!-- Modal -->
   <div class="modal fade in" id="myModal" role="dialog">
