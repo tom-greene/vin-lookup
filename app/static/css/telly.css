@@ -25,6 +25,20 @@ body {
   }
 }
 
+.js-clear-all {
+  position: relative;
+  top: 1em;
+  float:left; 
+}
+
+@media (max-width: 800.98px) {
+  .js-clear-all {
+    display:block;
+    width:100%;
+    float:none;
+  }
+}
+
 .nav-scroller {
   position: relative;
   z-index: 2;

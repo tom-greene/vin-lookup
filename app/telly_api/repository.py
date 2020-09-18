@@ -54,6 +54,8 @@ def get_car_list(args={}):
 def get_cars():
     return __get_cars_from_db__()
 
+def get_cars_recent():
+    return __get_cars_recent_from_db__()
 
 def get_car(vin):
     car = Car.query.filter_by(vin=vin).first()
@@ -121,3 +123,8 @@ def __get_dealers_from_db__():
 @cache.memoize()
 def __get_cars_from_db__():
     return Car.query.order_by(Car.created_date.desc()).all()
+
+@cache.memoize()
+def __get_cars_recent_from_db__():
+    start_date = datetime.utcnow() + timedelta(days=-60)
+    return Car.query.filter(Car.created_date >= start_date).order_by(Car.created_date.desc()).all()
