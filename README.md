@@ -6,8 +6,14 @@ This is being hosted on [Failcat](http://failcat.com/).
 
 For more info on Tellurides, I recommend [this forum](https://tellurideforum.org/)
 
+
 ## Running locally
-Database is Postgres
+- Database is Postgres
+- Python 3.6.8
+- PIP
+
+### Install requirements
+> pip install -r requirements.txt
 
 ### Set database url
 > export DATABASE_URL=postgresql://localhost/telly
